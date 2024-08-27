@@ -27,5 +27,6 @@ while heap:
 for i in range(1, n+1):
     if arr[i] == float("inf"):
         print("INF")
+        continue
     print(arr[i])
 
