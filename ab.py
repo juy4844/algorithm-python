@@ -44,7 +44,7 @@ if bo == True:
         a = 0
 
     while k != 0 or a != 0:
-        if k > line:
+        if k >= line:
             answer.appendleft("A")
             k -= line
             a -= 1

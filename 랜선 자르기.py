@@ -5,7 +5,7 @@ arr = []
 for i in range(k):
     arr.append(int(input()))
 
-maxv = max(arr)
+maxv = max(arr) + 1
 minv = 1
 
 while minv < maxv:
@@ -20,4 +20,4 @@ while minv < maxv:
     else:
         maxv = mid
     
-print(maxv)
+print(maxv - 1)

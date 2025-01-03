@@ -11,15 +11,15 @@ for i in range(n):
 
 cnt = 0
 
-b = True
+check = True
 
 if n < 3 or m < 3:
     for i in range(n):
         for j in range(m):
             if a[i][j] != b[i][j]:
-                b = False
+                check = False
                 break
-    if b == False:
+    if check == False:
         print(-1)
     else:
         print(0)

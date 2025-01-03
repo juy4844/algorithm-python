@@ -21,4 +21,4 @@ elif b == 4:
     if a == 0:
         print(-1)
     else:
-        print(a+1)
+        print(a+2)
