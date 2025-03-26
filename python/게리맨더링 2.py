@@ -21,17 +21,43 @@ def dfs(x, y, d1, d2):
             if flag:
                 tmp[i][j] = 5
 
+
+    for i in range(n):
+        for j in range(n):
+            if tmp[i][j] == 5:
+                break
+            if 0 <= i and i < x + d1 and 0 <= j and j <= y:
+                tmp[i][j] = 1
+
+    for i in range(n):
+        for j in range(n):
+
+            if tmp[i][j] == 5:
+                break
+            if x + d1 <= i and i < n and 0 <= j and j < y - d1 + d2:
+                tmp[i][j] = 3
+
+    for i in range(n):
+        for j in range(n):
+            if tmp[i][j] == 5 or tmp[i][j] == 1 or tmp[i][j] == 3:
+                continue
+            elif 0 <= i and i <= x + d2 and y < j and j < n:
+                tmp[i][j] = 2
+            elif x + d2 < i and i < n and y-d1+d2 <= j and j < n:
+                tmp[i][j] = 4
+
+
     for i in range(n):
         for j in range(n):
             if tmp[i][j] == 5:
                 check[4] += arr[i][j]
-            elif 0 <= i and i < x + d1 and 0 <= j and j <= y:
+            elif tmp[i][j] == 1:
                 check[0] += arr[i][j]
-            elif 0 <= i and i <= x + d2 and y < j and j < n:
+            elif tmp[i][j] == 2:
                 check[1] += arr[i][j]
-            elif x + d1 <= i and i < n and 0 <= j and j < y - d1 + d2:
+            elif tmp[i][j] == 3:
                 check[2] += arr[i][j]
-            elif x + d2 < i and i < n and y-d1+d2 <= j and j < n:
+            elif tmp[i][j] == 4:
                 check[3] += arr[i][j]
 
 
