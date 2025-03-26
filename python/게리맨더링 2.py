@@ -39,7 +39,7 @@ def dfs(x, y, d1, d2):
 
 ans = float("inf")
 
-for d1 in range(n):
+for d1 in range(1, n):
     for d2 in range(1, n):
         for x in range(n-d1-d2):
             for y in range(d1, n-d2):
